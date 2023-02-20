@@ -9,7 +9,7 @@ env:
   IMAGE: "mechinsae/fileless_malware_loader:DTA"
   REGISTRY: "Docker Hub"
   BUILD_JOB_NAME: "Github-Action-Sample"
-  BUILD_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/
+  BUILD_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{github.run_id}}
   BUILD_NUMBER: ${{ github.run_id }}
 jobs:
   scanner:
