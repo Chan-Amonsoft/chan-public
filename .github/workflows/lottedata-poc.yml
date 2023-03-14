@@ -12,7 +12,7 @@ env:
   BUILD_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{github.run_id}}
   BUILD_NUMBER: ${{ github.run_id }}
 jobs:
-  scanner2:
+  scanner:
     name: scanning-image
     runs-on: ubuntu-20.04
     steps:
