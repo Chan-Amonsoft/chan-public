@@ -8,8 +8,8 @@ on:
 env:
   IMAGE: "nginx:latest"
   REGISTRY: "Docker Hub"
-  BUILD_JOB_NAME: "Github-Action-Sample"
-  BUILD_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/
+  BUILD_JOB_NAME: "Github-Action-Lottedata-PoC"
+  BUILD_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{github.run_id}}
   BUILD_NUMBER: ${{ github.run_id }}
 jobs:
   scanner:
@@ -21,7 +21,7 @@ jobs:
 
       - name: Aqua Credentials
         run: |
-          wget --user ${{ secrets.AQUA_EMAIL }} --password ${{ secrets.AQUA_PASS }} https://download.aquasec.com/scanner/2022.4.217/scannercli 
+          wget --user ${{ secrets.AQUA_EMAIL }} --password ${{ secrets.AQUA_PASS }} https://download.aquasec.com/scanner/2022.4.235/scannercli 
       - name: Aqua Scanner
         run: |
           chmod +x scannercli
