@@ -1,4 +1,4 @@
-name: scanner
+name: fileless_malware_loader:DTA-scanner
 on:
   push:
     branches:
@@ -6,9 +6,9 @@ on:
   pull_request:
   workflow_dispatch:
 env:
-  IMAGE: "mechinsae/fileless_malware_loader:DTA"
+  IMAGE: "stanhoe/fileless_malware_loader:DTA"
   REGISTRY: "Docker Hub"
-  BUILD_JOB_NAME: "Github-Action-Sample-Chan3"
+  BUILD_JOB_NAME: "Github-Action-Lottedata-PoC-3"
   BUILD_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{github.run_id}}
   BUILD_NUMBER: ${{ github.run_id }}
 jobs:
@@ -21,7 +21,7 @@ jobs:
 
       - name: Aqua Credentials
         run: |
-          wget --user ${{ secrets.AQUA_EMAIL }} --password ${{ secrets.AQUA_PASS }} https://download.aquasec.com/scanner/2022.4.217/scannercli
+          wget --user ${{ secrets.AQUA_EMAIL }} --password ${{ secrets.AQUA_PASS }} https://download.aquasec.com/scanner/2302.13.13/scannercli
       - name: Aqua Scanner
         run: |
           chmod +x scannercli
