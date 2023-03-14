@@ -1,4 +1,4 @@
-name: scanner
+name: aquasec/nano-malware-example:1.1-scanner
 on:
   push:
     branches:
