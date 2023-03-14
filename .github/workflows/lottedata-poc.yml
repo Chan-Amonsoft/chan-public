@@ -8,7 +8,7 @@ on:
 env:
   IMAGE: "jerbi/alpine:DTA"
   REGISTRY: "Docker Hub"
-  BUILD_JOB_NAME: "Github-Action-Lottedata-PoC"
+  BUILD_JOB_NAME: "Github-Action-Lottedata-PoC-2"
   BUILD_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{github.run_id}}
   BUILD_NUMBER: ${{ github.run_id }}
 jobs:
