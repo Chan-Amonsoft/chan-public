@@ -6,13 +6,13 @@ on:
   pull_request:
   workflow_dispatch:
 env:
-  IMAGE: "jerbi/alpine:DTA"
+  IMAGE: "aquasec/nano-malware-example:1.1"
   REGISTRY: "Docker Hub"
   BUILD_JOB_NAME: "Github-Action-Lottedata-PoC-2"
   BUILD_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{github.run_id}}
   BUILD_NUMBER: ${{ github.run_id }}
 jobs:
-  scanner:
+  scanner2:
     name: scanning-image
     runs-on: ubuntu-20.04
     steps:
