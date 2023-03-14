@@ -1,4 +1,4 @@
-name: scanner
+name: nginx-scanner
 on:
   push:
     branches:
